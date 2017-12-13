@@ -17,7 +17,7 @@ env:
     - NAME="Jena Fuseki"
     - SOFTWARE_DESCRIBE="Jena Fuseki"
     - VERSION="3.4.0"
-    - SPARQLSCORE_DATABASE="localhost:8080/rdf4j-workbench/repositories"
+    - SPARQLSCORE_DATABASE="localhost:8080/rdf4j-server/repositories"
 #    - SPARQLSCORE_DATABASE="172.17.0.6" #local
 
 services:
