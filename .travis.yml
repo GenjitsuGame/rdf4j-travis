@@ -4,13 +4,6 @@ language: php
 php:
   - '7.1'
 
-notifications:
-  email:
-    recipients:
-      - karima.rafes@gmail.com
-    on_success: always # default: change (other : never)
-    on_failure: always # default: always
-
 env:
   global:
     - URI="https://travis-ci.org/BorderCloud/tft-jena-fuseki/builds/$((TRAVIS_JOB_ID - 1))"
