@@ -19,6 +19,7 @@ services:
 before_install:
   - docker pull bordercloud/tft-virtuoso7-stable
   - docker pull bordercloud/tft-jena-fuseki
+  - docker build -t genji/tomcat -f Dockerfile.tomcat .
   - docker build -t rdf4j -f Dockerfile.rdf4j .
 
 #  - docker pull bordercloud/tft-jena-fuseki
@@ -43,7 +44,7 @@ script:
 #  -   docker run --privileged --name instance.tft.example2.org -h example2.org -d bordercloud/tft-virtuoso7-stable
 #  -   docker run --privileged --name instance.tft_database -d bordercloud/tft-jena-fuseki
 
-  -   git clone --recursive https://github.com/BorderCloud/TFT.git
+  -   git clone --recursive https://github.com/GenjitsuGame/TFT.git
   -   cd TFT
   -   composer install --dev
   -   php ./tft-testsuite -a -t fuseki -q http://${SPARQLSCORE_DATABASE}/test/query -u http://${SPARQLSCORE_DATABASE}/test/update
